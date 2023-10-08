@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync --ignore-existing --include '*/' --include '*.html' --exclude '*' ./ ../
+find . -name "*.html" -exec rsync --ignore-existing --update {} ../ \;
